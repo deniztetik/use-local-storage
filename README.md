@@ -16,7 +16,7 @@ import React from 'react';
 
 import useLocalStorage from '@aslan-hooks/use-local-storage';
 
-const App = () => {
+const Component = () => {
   const [text, setText] = useLocalStorage('initialValue');
 
   return (

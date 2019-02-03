@@ -20,7 +20,7 @@ const App = () => {
   const [text, setText] = useLocalStorage('initialValue');
 
   return (
-    <input type="text" value={this.state.value} onChange={e => setText(e.target.value)} />
+    <input type="text" value={text} onChange={e => setText(e.target.value)} />
   )
 };
 ```

@@ -11,7 +11,7 @@ A React Hook for using local storage and keeping it in sync with your app
 
 ## Usage Instructions 
 
-```
+```jsx
 import React, { useState, useEffect } from 'react';
 
 import useLocalStorage from '@aslan-hooks/use-local-storage';

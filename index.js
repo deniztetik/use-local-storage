@@ -15,7 +15,9 @@ function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = 
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var useLocalStorage = function useLocalStorage(key, initialValue) {
+var useLocalStorage = function useLocalStorage(key) {
+  var initialValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : localStorage.getItem(key);
+
   var _useState = (0, _react.useState)(),
       _useState2 = _slicedToArray(_useState, 2),
       item = _useState2[0],
@@ -25,8 +27,6 @@ var useLocalStorage = function useLocalStorage(key, initialValue) {
     if (key && window.localStorage[key]) {
       var itemFromLocalStorage = JSON.parse(window.localStorage[key]);
       setItem(itemFromLocalStorage);
-    } else if (key && initialValue) {
-      window.localStorage.setItem(key, JSON.stringify(initialValue));
     }
   }, []);
   (0, _react.useEffect)(function () {

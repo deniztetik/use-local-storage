@@ -7,6 +7,8 @@ const useLocalStorage = (key, initialValue) => {
     if (key && window.localStorage[key]) {
       const itemFromLocalStorage = JSON.parse(window.localStorage[key]);
       setItem(itemFromLocalStorage);
+    } else if (key && initialValue) {
+      window.localStorage.setItem(key, JSON.stringify(initialValue));
     }
   }, []);
 
